@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Context, server } from '../main';
 import { toast } from 'react-hot-toast';
-import TodoItem from './../component/TodoItem';
+import Todoitem from './../component/Todoitem';
 import { Navigate } from 'react-router-dom';
 
 const Home = () => {
@@ -101,7 +101,7 @@ const Home = () => {
       </div>
       <section className='todosContainer'>
         {tasks.map((task) => (
-          <TodoItem
+          <Todoitem
             key={task._id}
             title={task.title}
             description={task.description}
